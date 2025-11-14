@@ -1,0 +1,426 @@
+<!DOCTYPE html>
+<html lang="en" translate="no">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Iskandar Turns One! - Birthday Invitation</title>
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Balsamiq+Sans:wght@400;700&family=Comfortaa:wght@300..700&family=Montserrat:wght@100..900&family=Racing+Sans+One&display=swap');
+    </style>
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/color.css" />
+    <link rel="icon" href="assets/icons/music-sign.webp" type="image/webp">
+    <script src="js/script.js" defer></script>
+  </head>
+
+  <body>
+    <div id="image-popup" class="popup-overlay1" onclick="closeImagePopup()">
+      <img id="popup-img" src="" alt="popup" />
+    </div>
+
+    <audio id="bg-music" src="assets/audio/music.mp3" loop></audio>
+    <button id="music-btn" style="display: none">
+      <img id="music-icon" src="assets/icons/music-sign.webp" alt="Music On" />
+    </button>
+
+    <main>
+      <div id="wrapper">
+        <div id="intro-screen" class="intro-screen">
+          <div class="intro-inner container">
+            <button
+              id="enter-btn"
+              class="animated-border"
+              style="display: flex; flex-direction: column; align-items: center"
+            >
+              <div
+                style="
+                  font-family: 'GreatVibes';
+                  text-align: center;
+                  margin-bottom: 8px;
+                "
+              ></div>
+              <img
+                src="assets/img/trophy.png"
+                alt="flower"
+                style="width: 80px; height: auto"
+              />
+                              <p
+                              style="
+                                font-family: 'Comfortaa', cursive;
+                                margin-top: 2px;
+                                font-size: 0.7em;
+                                margin: 0;
+                                line-height: 1;
+                              "
+                            >
+                              CLICK HERE
+                            </p>            </button>
+          </div>
+        </div>
+        <div id="main-content" style="display: none">
+          <section class="container">
+            <img src="assets/img/helmet.png" class="custom-top-left-bg" />
+            <h2>Start Your Engines…</h2>
+            <br /><br />
+            <br />
+            <p
+              style="
+                font-family: 'Velocista', cursive;
+                font-size: 4em;
+                margin: 0;
+                line-height: 1em;
+                color: #F7D000;
+                text-shadow: -2px -2px 0 #000, 2px -2px 0 #000, -2px 2px 0 #000, 2px 2px 0 #000;
+              "
+            >
+              Iskandar Ghazi Turns One!
+            </p>
+            <br /><br />
+
+            <h3>29 November 2025</h3>
+            <p>1:00 PM – 4:00 PM</p>
+            <h3>Rumah Aman</h3>
+            <p>
+              34 Jln Anjung U8/35, The Enclave, Bukit Jelutong, 40150 Shah Alam,
+              Selangor
+            </p>
+
+            <br /><br /><br />
+
+            <button
+              class="rsvp-btn rsvp-highlight"
+              onclick="handleRSVPClick(this)"
+            >
+              RSVP
+            </button>
+
+            <a
+              href="https://calendar.google.com/calendar/render?action=TEMPLATE&text=Start%20Your%20Engines%E2%80%A6%20Iskandar%20Turns%20One!&dates=20251129T130000/20251129T160000&details=Join%20us%20for%20a%20joyful%20celebration%20as%20we%20mark%20Iskandar%20Ghazi%E2%80%99s%201st%20Birthday%20with%20a%20fun%20and%20exciting%20F1-themed%20afternoon%20at%20Rumah%20Aman.&location=Rumah%20Aman%2C%2034%20Jalan%20Anjung%20U8%2F35%2C%20The%20Enclave%2C%20Bukit%20Jelutong%2C%2040150%20Shah%20Alam%2C%20Selangor&sf=true&output=xml"
+              target="_blank"
+            >
+              <button class="tarikh-btn">Save Date</button>
+            </a>
+
+            <img src="assets/img/checkred-fluid.png" class="bottom-right-bg" />
+          </section>
+
+          <section class="container">
+            <p><i>Hosted by,</i></p>
+            <br />
+            <p class="h3-main">
+              <strong>Ariff Amir & Amira Amrang</strong>
+            </p>
+            <br />
+            <p style="font-family: 'Comfortaa', cursive;">
+              <i
+                >Join us for a joyful celebration as we mark
+                Iskandar Ghazi’s 1st Birthday
+                with a fun and exciting F1-themed afternoon at Rumah Aman.</i
+              >
+            </p>
+            <br />
+          </section>
+
+
+
+          <section class="container" id="countdown-page">
+            <h1>Countdown</h1>
+            <img src="assets/img/f1-car.png" class="custom-bottom-left-bg" >
+            <div class="countdown">
+              <div class="countdown-box">
+                <h2 id="days">50</h2>
+                <div class="countdown-label">Days</div>
+              </div>
+              <div class="countdown-box">
+                <h2 id="hours">1</h2>
+                <div class="countdown-label">Hours</div>
+              </div>
+              <div class="countdown-box">
+                <h2 id="minutes">2</h2>
+                <div class="countdown-label">Minutes</div>
+              </div>
+              <div class="countdown-box">
+                <h2 id="seconds">16</h2>
+                <div class="countdown-label">Seconds</div>
+              </div>
+            </div>
+
+            <div
+              style="
+                display: flex;
+                gap: 10px;
+                justify-content: center;
+                text-align: center;
+              "
+            >
+              <div class="guest-count-label">
+                <h2 id="guest-count">--</h2>
+                Attending
+              </div>
+              <div class="guest-count-label">
+                <h2 id="guest-count-no">--</h2>
+                Not Attending
+              </div>
+            </div>
+          </section>
+
+
+
+          <section class="shorter container">
+            <h1>Event Itinerary</h1>
+            <div class="timeline-text">
+              <div class="timeline-row">
+                <div class="time">1:00 PM</div>
+                <div class="event">Guest Arrival</div>
+              </div>
+              <div class="timeline-row">
+                <div class="time">1:30 PM</div>
+                <div class="event">Lunch & Birthday Celebration</div>
+              </div>
+              <div class="timeline-row">
+                <div class="time">4:00 PM</div>
+                <div class="event">Ends</div>
+              </div>
+            </div>
+            <img src="assets/img/car-racing.png" class="bottom-right-bg" />
+          </section>
+
+
+        </div>
+
+        <section class="short container">
+          <h2>Wishes</h2>
+          <div id="ucapan-list" class="ucapan-scroll"></div>
+          <button
+            class="rsvp-btn rsvp-highlight"
+            onclick="handleRSVPClick(this)"
+          >
+            RSVP
+          </button>
+          <img
+            src="assets/img/flag.png"
+            class="customm-bottom-left-bg"
+          />
+        </section>
+        <br />
+
+        <div
+          id="popup-overlay"
+          class="popup-overlay"
+          onclick="closePopup()"
+        ></div>
+
+        <section id="popup-contact" class="popup-section">
+          <button class="close" onclick="closePopup()">x</button>
+          <h2>Contact</h2>
+          <div
+            style="
+              display: flex;
+              flex-direction: column;
+              gap: 10px;
+              margin-top: 20px;
+            "
+          >
+            <div class="contact-container">
+              <a
+                href="https://wa.me/60172883711?text=Assalamualaikum%2C%20saya%20ingin%20bertanya%20mengenai%20Iskandar's%201st%20Birthday%20Party."
+                target="_blank"
+                class="contact-link"
+              >
+                <div class="contact-box">
+                  <div>
+                    <strong>Amira</strong><br />
+                    <span>017-2883 711</span>
+                  </div>
+                  <img
+                    src="assets/icons/whatsapp.webp"
+                    alt="WhatsApp"
+                    class="wa-icon"
+                  />
+                </div>
+              </a>
+            </div>
+            <div class="contact-container">
+              <a
+                href="https://wa.me/60192823624?text=Assalamualaikum%2C%20saya%20ingin%20bertanya%20mengenai%20Iskandar's%201st%20Birthday%20Party."
+                target="_blank"
+                class="contact-link"
+              >
+                <div class="contact-box">
+                  <div>
+                    <strong>Ariff</strong><br />
+                    <span>019-2823 624</span>
+                  </div>
+                  <img
+                    src="assets/icons/whatsapp.webp"
+                    alt="WhatsApp"
+                    class="wa-icon"
+                  />
+                </div>
+              </a>
+            </div>
+          </div>
+        </section>
+
+        <section id="popup-rsvp" class="popup-section">
+          <button class="close" onclick="closePopup()">x</button>
+          <h2>RSVP</h2>
+
+          <div id="attendance-step" style="margin-top: 15%">
+            <p style="color: white; align-self: center; font-size: 1em">
+              Will you be attending this event?
+            </p>
+            <button
+              class="kehadiran"
+              type="button"
+              onclick="setAttendance('Hadir')"
+            >
+              Yes
+            </button>
+            <button
+              class="kehadiran"
+              type="button"
+              onclick="setAttendance('Tidak Hadir')"
+            >
+              No
+            </button>
+          </div>
+
+          <p
+            id="rsvp-success"
+            style="display: none; color: green; margin-top: 10px"
+          >
+            Thank you for confirming your attendance. Your presence is greatly appreciated.
+          </p>
+
+          <form id="rsvp-form" action="#" method="POST" style="display: none">
+            <input type="hidden" id="hadir-status" name="entry.1210918388" />
+
+            <p class="labell">Name:</p>
+            <input
+              type="text"
+              id="name"
+              name="entry.957753136"
+              placeholder="Your Name"
+              required
+            />
+
+            <p class="labell">Number of Guests:</p>
+            <select id="guest-amount" name="entry.1279058359" required>
+              <option value="" disabled selected>Select amount</option>
+              <option value="1">1</option>
+              <option value="2">2</option>
+              <option value="3">3</option>
+              <option value="4">4</option>
+              <option value="5">5</option>
+            </select>
+
+            <p id="wordCount">
+              <span class="labell">Wishes:</span> (0 / 20 words)
+            </p>
+            <textarea
+              id="speech"
+              name="entry.871569093"
+              rows="4"
+              placeholder="Write your wishes here"
+            ></textarea>
+            <script>
+              document.addEventListener("DOMContentLoaded", () => {
+                const textarea = document.getElementById("speech");
+                const counter = document.getElementById("wordCount");
+
+                textarea.addEventListener("input", () => {
+                  let words = textarea.value
+                    .trim()
+                    .split(/\s+/)
+                    .filter(Boolean);
+                  if (words.length > 20) {
+                    words = words.slice(0, 20);
+                    textarea.value = words.join(" ");
+                  }
+                  counter.innerHTML = `<span class="labell">Ucapan:</span> (${words.length} / 20 perkataan)`;
+                });
+              });
+            </script>
+            <button class="hadir-submit" type="submit">Submit</button>
+          </form>
+        </section>
+
+        <section
+          id="popup-location"
+          class="popup-section"
+          style="text-align: center"
+        >
+          <button class="close" onclick="closePopup()">x</button>
+          <h2>Location</h2>
+          <div class="contact-container">
+            <p style="color: white">
+              Rumah Aman<br />
+              34 Jln Anjung U8/35, The Enclave,<br />
+              Bukit Jelutong, 40150 Shah Alam,<br />
+              Selangor<br />
+            </p>
+
+            <a
+              href="https://www.google.com/maps/search/?api=1&query=Rumah%20Aman%2C%2034%20Jln%20Anjung%20U8%2F35%2C%20The%20Enclave%2C%20Bukit%20Jelutong%2C%2040150%20Shah%20Alam%2C%20Selangor"
+              target="_blank"
+              class="contact-link"
+            >
+              <div class="contact-box">
+                <div><strong>Google Maps</strong><br /></div>
+                <img
+                  src="assets/icons/google-maps.webp"
+                  alt="Google Maps"
+                  class="wa-icon"
+                />
+              </div>
+            </a>
+
+            <a
+              href="https://waze.com/ul/hw281wq77g"
+              target="_blank"
+              class="contact-link"
+            >
+              <div class="contact-box">
+                <div><strong>Waze</strong><br /></div>
+                <img src="assets/icons/waze.webp" alt="Waze" class="wa-icon" />
+              </div>
+            </a>
+          </div>
+        </section>
+      </div>
+    </main>
+
+    <footer id="navigation">
+      <div class="nav-links">
+        <div onclick="toggleSection('contact')">
+          <img
+            src="assets/icons/telephone.png"
+            alt="Contact"
+            class="nav-icon"
+          />
+          <span>Contact</span>
+        </div>
+        <div onclick="toggleSection('rsvp')">
+          <img src="assets/icons/mail.webp" alt="RSVP" class="nav-icon" />
+          <span>RSVP</span>
+        </div>
+        <div onclick="toggleSection('location')">
+          <img
+            src="assets/icons/location.png"
+            alt="Location"
+            class="nav-icon"
+          />
+          <span>Location</span>
+        </div>
+      </div>
+    </footer>
+    <div id="confirm-popup" class="confirm-popup">
+      <p id="confirm-message"></p>
+      <div class="popup-buttons">
+        <button onclick="handleConfirm(true)">Ok</button>
+        <button onclick="handleConfirm(false)">Cancel</button>
+      </div>
+    </div>
+  </body>
+</html>
