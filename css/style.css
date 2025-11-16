@@ -770,7 +770,7 @@ form textarea {
   opacity: 1;
   pointer-events: none;
   z-index: 0;
-  transform: scaleX(-1) rotate(-8deg);
+  transform: scaleX(-1) rotate(25deg);
 }
 
 .custom-bottom-left-bg {
