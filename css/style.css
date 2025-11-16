@@ -80,7 +80,7 @@ h2 {
 }
 h3 {
   font-family: 'Racing Sans One', cursive;
-  font-size: 1em;
+  font-size: 1.4em;
   margin: 8px 0;
   text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
 }
@@ -770,7 +770,7 @@ form textarea {
   opacity: 1;
   pointer-events: none;
   z-index: 0;
-  transform: scaleX(-1) rotate(-10deg);
+  transform: scaleX(-1) rotate(-8deg);
 }
 
 .custom-bottom-left-bg {
