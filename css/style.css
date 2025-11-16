@@ -764,13 +764,13 @@ form textarea {
 
 .custom-top-left-bg {
   position: absolute;
-  top: 0;
+  top: -1;
   left: -90px;
   width: 70%;
   opacity: 1;
   pointer-events: none;
   z-index: 0;
-  transform: scaleX(-1) rotate(-20deg);
+  transform: scaleX(-1) rotate(-10deg);
 }
 
 .custom-bottom-left-bg {
