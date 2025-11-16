@@ -733,11 +733,11 @@ form textarea {
   position: absolute;
   bottom: 20px;
   right: -100px;
-  width: 80%;
+  width: 70%;
   opacity: 1;
   pointer-events: none;
   z-index: 0;
-  transform: scaleX(-1) rotate(45deg);
+  transform: scaleX(-1) rotate(20deg);
 }
 
 .car-racing-no-rotate {
@@ -766,22 +766,22 @@ form textarea {
   position: absolute;
   top: 0;
   left: -90px;
-  width: 60%;
+  width: 70%;
   opacity: 1;
   pointer-events: none;
   z-index: 0;
-  transform: scaleX(-1) rotate(-30deg);
+  transform: scaleX(-1) rotate(-20deg);
 }
 
 .custom-bottom-left-bg {
   position: absolute;
   bottom: 0.01;
   left: -80px;
-  width: 40%; /* This controls the size */
+  width: 60%; /* This controls the size */
   opacity: 1;
   pointer-events: none;
-  z-index: 0;
-  transform: scaleX(-1) rotate(-45deg);
+  z-index: 1;
+  transform: scaleX(-1) rotate(20deg);
 }
 
 .customm-bottom-left-bg {
@@ -792,7 +792,7 @@ form textarea {
   opacity: 1;
   pointer-events: none;
   z-index: 0;
-  transform: scaleX(-1) rotate(-30deg);
+  transform: rotate(30deg);
 }
 
 .confirm-popup {
